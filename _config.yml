@@ -1,0 +1,58 @@
+title: "Articles"
+description: "A collection of technical articles and essays"
+baseurl: ""
+url: "https://rsinghvi.github.io/articles"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Rahul Singh"
+
+# Site settings
+author:
+  name: "Rahul Singh"
+  email: "your-email@example.com"
+
+# Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X
+
+# Social (optional)
+github_username: rsinghvi
+# twitter_username: your_twitter
+# linkedin_username: your_linkedin
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Reading time calculation
+reading_time: true
