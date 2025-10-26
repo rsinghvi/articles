@@ -32,10 +32,14 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 0
+          working-directory: .
           
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+        
+      - name: Install dependencies
+        run: bundle install
         
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
