@@ -2,6 +2,7 @@ title: "Articles"
 description: "A collection of technical articles and essays"
 baseurl: "/articles"
 url: "https://rsinghvi.github.io"
+# Updated: 2025-11-16
 
 # Build settings
 markdown: kramdown
