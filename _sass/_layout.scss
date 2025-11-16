@@ -24,14 +24,15 @@
 }
 
 .site-nav {
-  float: right;
-  margin-top: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-nav .trigger {
   display: flex;
   gap: 2rem;
-  justify-content: flex-end;
+  align-items: center;
 }
 
 .site-nav .page-link {
@@ -41,6 +42,25 @@
 
 .site-nav .page-link:hover {
   color: #1a1a1a;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a5568;
+  transition: color 0.2s ease;
+}
+
+.social-icon-link:hover {
+  color: #1a1a1a;
+  text-decoration: none;
 }
 
 /* Clear floats */
@@ -423,22 +443,37 @@
   border-top: 1px solid #e2e8f0;
   padding: 2rem 0;
   margin-top: 3rem;
-  background-color: #f7fafc;
+  background-color: #ffffff;
 }
 
 .footer-content {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-content p {
+  margin: 0;
   color: #718096;
   font-size: 0.9rem;
 }
 
-.footer-content p {
-  margin: 0.5rem 0;
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .footer-content a {
-  color: #3182ce;
+  color: #4a5568;
   font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-content a:hover {
+  color: #1a1a1a;
+  text-decoration: none;
 }
 
 /* No posts message */
