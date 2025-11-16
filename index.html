@@ -4,45 +4,76 @@ layout: default
 
 <div class="home">
     <div class="hero-section">
-        <h1 class="hero-title">Articles</h1>
+        <h1 class="hero-title">Blog</h1>
         <p class="hero-description">{{ site.description }}</p>
     </div>
 
     {% if site.posts.size > 0 %}
-    <div class="posts-list">
-        {% for post in site.posts %}
-        <article class="post-preview">
-            <div class="post-meta">
-                <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
-                    {{ post.date | date: "%b %d, %Y" }}
-                </time>
-                {% if post.reading_time %}
-                <span class="reading-time">{{ post.reading_time }} min read</span>
-                {% endif %}
-            </div>
-            
-            <h2 class="post-title">
-                <a href="{{ post.url | relative_url }}" class="post-link">
-                    {{ post.title | escape }}
-                </a>
-            </h2>
-            
-            {% if post.excerpt %}
-            <div class="post-excerpt">
-                {{ post.excerpt | strip_html | truncate: 200 }}
-            </div>
-            {% endif %}
-            
-            {% if post.tags.size > 0 %}
-            <div class="post-tags">
-                {% for tag in post.tags %}
-                <span class="tag">{{ tag }}</span>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </article>
-        {% endfor %}
+    
+    <!-- Tag Filter -->
+    <div class="tag-filter">
+        <button class="tag-btn active" data-tag="all">ALL</button>
+        <button class="tag-btn" data-tag="testing">TESTING</button>
+        <button class="tag-btn" data-tag="mutation-testing">MUTATION-TESTING</button>
+        <button class="tag-btn" data-tag="software-quality">SOFTWARE-QUALITY</button>
+        <button class="tag-btn" data-tag="code-coverage">CODE-COVERAGE</button>
     </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" placeholder="Search articles..." id="search-input">
+    </div>
+
+    <!-- Featured Posts -->
+    <section class="featured-section">
+        <h2 class="section-title">Featured Posts</h2>
+        <div class="featured-posts">
+            {% for post in site.posts limit:2 %}
+            <article class="featured-post">
+                <div class="post-tags-inline">
+                    {% for tag in post.tags limit:3 %}
+                    <span class="tag-inline">{{ tag | upcase }}</span>
+                    {% endfor %}
+                </div>
+                <h3 class="featured-post-title">
+                    <a href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </h3>
+                <p class="featured-post-excerpt">
+                    {{ post.excerpt | strip_html | truncate: 180 }}
+                </p>
+                <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Recent Posts -->
+    <section class="recent-section">
+        <h2 class="section-title">Recent Posts</h2>
+        <div class="recent-posts">
+            {% for post in site.posts offset:2 %}
+            <article class="recent-post">
+                <div class="post-tags-inline">
+                    {% for tag in post.tags limit:3 %}
+                    <span class="tag-inline">{{ tag | upcase }}</span>
+                    {% endfor %}
+                </div>
+                <h3 class="recent-post-title">
+                    <a href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </h3>
+                <p class="recent-post-excerpt">
+                    {{ post.excerpt | strip_html | truncate: 180 }}
+                </p>
+                <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    
     {% else %}
     <div class="no-posts">
         <p>No articles published yet. Check back soon!</p>

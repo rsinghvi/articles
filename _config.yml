@@ -1,5 +1,5 @@
-title: "Articles"
-description: "A collection of technical articles and essays"
+title: "Blog"
+description: "Thoughts on web development, testing, performance, and developer experience"
 baseurl: "/articles"
 url: "https://rsinghvi.github.io"
 # Updated: 2025-11-16
