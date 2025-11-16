@@ -4,7 +4,6 @@ title: "Testing the tests: Uncovering the power of mutation testing"
 date: 2025-10-26
 author: "Rahul Singhvi"
 tags: ["testing", "software-quality", "mutation-testing", "code-coverage"]
-reading_time: 8
 excerpt: "Mutation testing is a powerful technique for evaluating the quality of your test suite by introducing small changes to your code and checking if your tests catch them. Learn how to implement mutation testing in your projects and improve your code quality."
 ---
 

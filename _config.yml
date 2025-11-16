@@ -1,5 +1,5 @@
 title: "Blog"
-description: "Thoughts on web development, testing, performance, and developer experience"
+description: "Thoughts on testing and software engineering"
 baseurl: "/articles"
 url: "https://rsinghvi.github.io"
 # Updated: 2025-11-16
@@ -48,8 +48,8 @@ author:
 
 # Social (optional)
 github_username: rsinghvi
+linkedin_username: rahulsinghvi
 # twitter_username: your_twitter
-# linkedin_username: your_linkedin
 
 # Pagination
 paginate: 10
