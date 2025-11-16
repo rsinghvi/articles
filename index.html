@@ -10,50 +10,11 @@ layout: default
 
     {% if site.posts.size > 0 %}
     
-    <!-- Tag Filter -->
-    <div class="tag-filter">
-        <button class="tag-btn active" data-tag="all">ALL</button>
-        <button class="tag-btn" data-tag="testing">TESTING</button>
-        <button class="tag-btn" data-tag="mutation-testing">MUTATION-TESTING</button>
-        <button class="tag-btn" data-tag="software-quality">SOFTWARE-QUALITY</button>
-        <button class="tag-btn" data-tag="code-coverage">CODE-COVERAGE</button>
-    </div>
-
-    <!-- Search Box -->
-    <div class="search-box">
-        <input type="text" placeholder="Search articles..." id="search-input">
-    </div>
-
-    <!-- Featured Posts -->
-    <section class="featured-section">
-        <h2 class="section-title">Featured Posts</h2>
-        <div class="featured-posts">
-            {% for post in site.posts limit:2 %}
-            <article class="featured-post">
-                <div class="post-tags-inline">
-                    {% for tag in post.tags limit:3 %}
-                    <span class="tag-inline">{{ tag | upcase }}</span>
-                    {% endfor %}
-                </div>
-                <h3 class="featured-post-title">
-                    <a href="{{ post.url | relative_url }}">
-                        {{ post.title | escape }}
-                    </a>
-                </h3>
-                <p class="featured-post-excerpt">
-                    {{ post.excerpt | strip_html | truncate: 180 }}
-                </p>
-                <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
-            </article>
-            {% endfor %}
-        </div>
-    </section>
-
     <!-- Recent Posts -->
     <section class="recent-section">
         <h2 class="section-title">Recent Posts</h2>
         <div class="recent-posts">
-            {% for post in site.posts offset:2 %}
+            {% for post in site.posts %}
             <article class="recent-post">
                 <div class="post-tags-inline">
                     {% for tag in post.tags limit:3 %}

@@ -28,8 +28,13 @@
   margin-top: 0.25rem;
 }
 
+.site-nav .trigger {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
 .site-nav .page-link {
-  margin-left: 2rem;
   color: #4a5568;
   font-weight: 500;
 }
@@ -58,8 +63,10 @@
 
 .hero-section {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
+  margin: -2rem -1rem 3rem -1rem;
+  padding: 3rem 1rem;
+  background-color: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .hero-title {
