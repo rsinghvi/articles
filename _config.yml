@@ -35,12 +35,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Rahul Singh"
+      author: "Rahul Singhvi"
 
 # Site settings
 author:
-  name: "Rahul Singh"
-  email: "your-email@example.com"
+  name: "Rahul Singhvi"
+  email: "rsinghvi.pune@gmail.com"
 
 # Analytics (optional)
 # google_analytics: UA-XXXXXXXX-X

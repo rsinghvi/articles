@@ -1,6 +1,6 @@
 # Articles
 
-A Jekyll-based static site for publishing technical articles and essays.
+A Jekyll-based static site for publishing technical articles.
 
 🌐 **Live Site**: https://rsinghvi.github.io/articles
 
