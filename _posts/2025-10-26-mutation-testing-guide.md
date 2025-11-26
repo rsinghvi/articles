@@ -270,5 +270,3 @@ The solution? **Mutation Testing in the Loop**. We need to shift from focusing o
 - [Software Engineering Daily: Mutation Testing Podcast](https://open.spotify.com/episode/3ea5WrL9OnrVe3Pu0A9Mxp?si=goXT-G72TcGEOFPkSfIggA)
 
 ---
-
-*Have you tried mutation testing in your projects? Share your experiences and challenges in the comments below.*
