@@ -56,24 +56,4 @@ layout: default
             <a href="{{ '/' | relative_url }}" class="back-link">Back to Articles</a>
         </div>
     </footer>
-        <section id="comments" class="post-comments">
-            <h2>Comments</h2>
-            <p class="comments-intro">Have thoughts or questions? Join the discussion below.</p>
-            <script src="https://giscus.app/client.js"
-                            data-repo="{{ site.giscus.repo }}"
-                            data-repo-id="{{ site.giscus.repo_id }}"
-                            data-category="{{ site.giscus.category }}"
-                            data-category-id="{{ site.giscus.category_id }}"
-                            data-mapping="{{ site.giscus.mapping | default: 'pathname' }}"
-                            data-strict="{{ site.giscus.strict | default: 0 }}"
-                            data-reactions-enabled="{{ site.giscus.reactions_enabled | default: 1 }}"
-                            data-emit-metadata="{{ site.giscus.emit_metadata | default: 0 }}"
-                            data-input-position="{{ site.giscus.input_position | default: 'bottom' }}"
-                            data-theme="{{ site.giscus.theme | default: 'light' }}"
-                            data-lang="{{ site.giscus.lang | default: 'en' }}"
-                            crossorigin="anonymous"
-                            async>
-            </script>
-            <noscript>Please enable JavaScript to view comments.</noscript>
-        </section>
 </article>
