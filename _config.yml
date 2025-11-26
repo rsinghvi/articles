@@ -13,6 +13,22 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# Comments (giscus) configuration
+# To enable comments, fill in the values below using https://giscus.app/
+# Ensure GitHub Discussions is enabled on the repository.
+giscus:
+  repo: rsinghvi/articles
+  repo_id: "" # e.g., R_kgDOLxxxx
+  category: General
+  category_id: "" # e.g., DIC_kwDOxxxx4CAXXXXX
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: bottom
+  theme: light
+  lang: en
+
 # Exclude from processing
 exclude:
   - Gemfile
